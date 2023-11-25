@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  /* :root {
+    @apply text-sm sm:text-base
+  } */
+  @font-face {
+    font-family: iransans;
+    src: url("../fonts/iranSans/iransans.ttf") format("truetype");
+  }
+  .iransans {
+    font-family: iransans;
+  }
+}
+@layer utilities {
+  .backdblur {
+    backdrop-filter: blur(12px);
+  }
+}

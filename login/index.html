@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود به سایت | سکرت گیم</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="fontIcons/css/all.css">
+</head>
+<body class="iransans flex justify-center items-center h-screen bg-violet-200">
+  <div class="container">
+    <div class="w-[95%] sm:w-[85%] mx-auto relative border border-solid border-violet-950/20 rounded-lg overflow-hidden shadow-xl">
+      <div class="w-60 h-60 absolute -top-16 -left-10 block bg-violet-600 -z-[2000] rounded-full"></div>
+      <div class="w-60 h-60 absolute -bottom-24 -right-10 block bg-violet-700 -z-[2000] rounded-full"></div>
+      <div class="backdrop-blur-md bg-violet-400/10  py-4 grid grid-cols-2">
+        <!-- <div class="absolute top-0 right-0 left-0 py-2 text-center bg-red-500 rounded-b-lg hidden" id="errorMsg">لطفا فیلد ها را پر کنید!</div> -->
+        <div class="col-span-2 md:col-span-1 px-1 sm:px-8 md:px-1 flex flex-col justify-around">
+          <h1 class="text-3xl font-bold text-center mt-4">ورود به حساب</h1>
+          <form action="javascript:void(0)" class="my-9 flex flex-col gap-5 lg:gap-8 mx-auto w-[98%]" id="formLogin">
+            <div>
+              <label for="username" class="py-2 inline-block transition-all duration-200 translate-y-10 -translate-x-10 sm:-translate-x-12"
+                id="usernameLabel">نام کاربری</label>
+              <div class="bg-white/70 rounded-lg flex items-center h-10 relative">
+                <label class="w-8 h-8 sm:w-10 sm:h-10 p-1" for="username">
+                  <div class="flex w-full h-full items-center justify-center">
+                    <i class="far fa-user block text-2xl sm:text-3xl"></i>
+                  </div>
+                </label>
+                <input type="text" id="username"
+                  class="bg-transparent w-[calc(100%-2rem)] sm:w-[calc(100%-2.5rem)] h-full px-2 border border-solid invalid:border-red-500 valid:border-green-500 rounded-l-lg outline-none peer/pass" title="طول نام کاربری باید حداقل 5 رقم و حداکثر از 18رقم تشکیل شده باشد." pattern="\w{5,18}" required>
+              </div>
+              <label for="username">
+                <div class="py-1 text-red-600 rounded-b-lg hidden text-xs" id="errorUsername">
+                  طول نام کاربری باید حداقل 5 رقم و حداکثر از 18رقم تشکیل شده باشد.
+                </div>
+              </label>
+            </div>
+            <div>
+              <label for="password" class="py-2 inline-block translate-y-10 -translate-x-10 sm:-translate-x-12 transition-all duration-200" id="passwordLabel">پسورد</label>
+              <div class="bg-white/70 rounded-lg flex items-center h-10 relative">
+                <label class="h-8 w-8 sm:h-10 sm:w-10 p-1" for="password">
+                  <div class="flex w-full h-full justify-center items-center">
+                    <i class="far fa-lock text-2xl sm:text-3xl"></i>
+                  </div>
+                </label>
+                <input type="password" id="password"
+                class="bg-transparent pr-2 pl-8 sm:pl-10 w-[calc(100%-2rem)] sm:w-[calc(100%-2.5rem)] h-full border border-solid invalid:border-red-500 valid:border-green-500 rounded-l-lg outline-none"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="طول رمز عبور باید حداقل 8 رقم باشد و حداقل از یک حرف بزرگ و یک حرف کوچک و اعداد تشکیل شده باشد." required>
+                  <div class="h-9 w-9 sm:h-10 sm:w-10 absolute left-0 p-1">
+                    <div
+                      class="w-full h-full cursor-pointer flex justify-center items-center relative" id="showPassword">
+                      <i class="far fa-eye text-2xl sm:text-3xl"></i>
+                      <div class="h-1 w-0 bg-white flex items-end rotate-45 absolute inset-0 m-auto transition-all ease-in-out rounded-xl" id="showPasswordLine">
+                        <div class="h-0.5 w-full bg-black rounded-2xl"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="password">
+                  <div class="py-1 text-red-600 rounded-b-lg hidden text-xs" id="errorPass">
+                    طول رمز عبور باید حداقل 8 رقم باشد و حداقل از یک حرف بزرگ و یک حرف کوچک و اعداد تشکیل شده باشد.
+                  </div>
+                </label>
+              </div>
+            <input type="submit" value="ورود" class="cursor-pointer text-white py-2 text-center w-full bg-green-600/90 hover:bg-green-700/90 active:bg-green-800/90 rounded-lg" id="formSubmit">
+          </form>
+          <div class="mx-auto w-[98%] my-4 flex flex-col gap-3">
+            <div>
+              <a href="javascript:void(0)" class="text-green-300 hover:text-green-400 active:text-green-500">فراموشی رمز عبور</a>
+            </div>
+            <div>
+              <a href="javascript:void(0)" class="text-green-300 hover:text-green-400 active:text-green-500">ثبت نام در سایت</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img src="images/login.svg" alt="login" class="h-full">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex invisible opacity-0 overflow-hidden top-0 left-0 w-screen h-screen absolute bg-gray-400/60 backdrop-blur-md transition-all duration-200 items-center justify-center" id="haveForm">
+    <div class="container">
+      <div class="text-3xl text-center">
+        <div>
+          شما یک فرم ورود ناتمام دارید
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 sm:grid-rows-1 grid-cols-1 grid-rows-2 max-w-md mt-3 mx-auto gap-x-3 gap-y-2">
+        <div>
+          <label for="username">
+            <div class="text-center py-2 cursor-pointer text-sm text-white bg-green-500 rounded-lg" id="newForm">
+              فرم ورود جدید
+            </div>
+          </label>
+        </div>
+        <div>
+          <label for="username">
+            <div class="text-center py-2 bg-red-500 rounded-lg cursor-pointer text-sm text-white" id="continueForm">
+              ادامه فرم ورود قبلی
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
