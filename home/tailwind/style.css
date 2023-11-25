@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: iranSans;
+    src: url("../fonts/iranSans/iransans.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: logoFont;
+    src: url("../fonts/astraneo/Astraneo.ttf") format("truetype"),
+    url("../fonts/astraneo/Astraneo.otf") format("opentype");
+  }
+  .iransans {
+    font-family: iranSans;
+  }
+  .logofont {
+    font-family: logoFont;
+  }
+}
+@layer utilities {
+  .after\:w-full {
+    @apply after:w-full;
+  }
+  .messagebox {
+    clip-path: polygon(0% 0%, 95% 0, 95% 90%, 100% 100%, 90% 90%, 0 90%);
+  }
+  .headercontainer {
+    @apply mt-2 grid grid-cols-2 h-[448px] grid-rows-1
+  }
+  .headertextlava {
+    background-image: url("../images/header/magma.gif");
+  }
+  .gradient {
+    @apply bg-gradient-to-r from-[#A8DADC] to-[#E63946]
+  }
+  .gradientinsta {
+    background-image: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
+}
