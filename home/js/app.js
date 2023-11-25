@@ -12,7 +12,7 @@ let footerText = $.getElementsByName("footertoggle");
 let aboutus = $.getElementById("aboutUs");
 let aboutText = $.getElementById("abouttext");
 let contactText = $.getElementById("contacttxt");
-let footerFlag = new Boolean();
+let footerFlag = false;
 
 let supportButton = $.getElementById("support");
 let supportClose = $.getElementById("supportClose");
@@ -79,6 +79,14 @@ supportButton.addEventListener("click", function () {
   }
   supportButton.classList.add("rounded-full");
 });
+
+
+contactText.style.right = 0;
+contactus.classList.add("after:w-full");
+aboutus.classList.remove("after:w-full");
+aboutText.style.right = "100vw";
+footerFlag = true;
+
 contactus.addEventListener("click", function () {
   footerFlag = false;
   if (!footerFlag) {
