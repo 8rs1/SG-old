@@ -25,10 +25,15 @@ username.addEventListener("invalid", function () {
   setTimeout(function () {
     errorUsername.classList.add("hidden");
     errorPassword.classList.remove("block");
-  },8000)
-})
-if (isHaveForm) { // check username value when page loaded
-  labelUsername.classList.remove("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
+  }, 8000);
+});
+if (isHaveForm) {
+  // check username value when page loaded
+  labelUsername.classList.remove(
+    "-translate-x-10",
+    "sm:-translate-x-12",
+    "translate-y-10"
+  );
   haveFormContainer.classList.add("visible");
   haveFormContainer.classList.add("opacity-1");
   haveFormContainer.classList.remove("invisible");
@@ -39,34 +44,30 @@ continueForm.addEventListener("click", function () {
   haveFormContainer.classList.remove("opacity-1");
   haveFormContainer.classList.add("opacity-0");
   haveFormContainer.classList.add("invisible");
-})
+});
 newForm.addEventListener("click", function () {
   username.value = "";
   haveFormContainer.classList.remove("visible");
   haveFormContainer.classList.remove("opacity-1");
   haveFormContainer.classList.add("opacity-0");
   haveFormContainer.classList.add("invisible");
-})
-username.addEventListener("focusin", function () {
-  username.addEventListener("keypress", function () {
-    labelUsername.classList.remove("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-    username.addEventListener("keyup", function () {
-      if (!username.value) {
-        labelUsername.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-      }
-    })
-    username.addEventListener("keydown", function () {
-      if (!username.value) {
-        labelUsername.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-      }
-    })
-  })
-})
-username.addEventListener("focusout", function () {
-  if (!username.value) {
-    labelUsername.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
+});
+username.addEventListener("input", function (inp) {
+  let usernameTarget = inp.target;
+  if (usernameTarget.value) {
+    labelUsername.classList.remove(
+      "-translate-x-10",
+      "sm:-translate-x-12",
+      "translate-y-10"
+    );
+  } else {
+    labelUsername.classList.add(
+      "-translate-x-10",
+      "sm:-translate-x-12",
+      "translate-y-10"
+    );
   }
-})
+});
 // username codes end
 // password codes start
 showPassword.addEventListener("click", function () {
@@ -81,35 +82,28 @@ showPassword.addEventListener("click", function () {
     password.setAttribute("type", "text");
     showPassFlag = true;
   }
-})
+});
 password.addEventListener("invalid", function () {
   errorPassword.classList.add("block");
   errorPassword.classList.remove("hidden");
   setTimeout(function () {
     errorPassword.classList.add("hidden");
     errorPassword.classList.remove("block");
-  },8000)
-})
-if (password.value) {
-  labelPassword.classList.remove("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-}
-password.addEventListener("focusin", function () {
-  password.addEventListener("keypress", function () {
-    labelPassword.classList.remove("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-    password.addEventListener("keyup", function () {
-      if (!password.value) {
-        labelPassword.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-      }
-    })
-    password.addEventListener("keydown", function () {
-      if (!password.value) {
-        labelPassword.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
-      }
-    })
-  })
-})
-password.addEventListener("focusout", function () {
-    if (!password.value) {
-    labelPassword.classList.add("-translate-x-10", "sm:-translate-x-12", "translate-y-10");
+  }, 8000);
+});
+password.addEventListener("input", function (inp) {
+  let passwordTarget = inp.target;
+  if (passwordTarget.value) {
+    labelPassword.classList.remove(
+      "-translate-x-10",
+      "sm:-translate-x-12",
+      "translate-y-10"
+    );
+  } else {
+    labelPassword.classList.add(
+      "-translate-x-10",
+      "sm:-translate-x-12",
+      "translate-y-10"
+    );
   }
-})
+});
