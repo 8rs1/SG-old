@@ -1414,6 +1414,12 @@ video {
   background-color: rgb(236 253 245 / var(--tw-bg-opacity));
 }
 
+.after\:bg-slate-900::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
 .after\:transition-all::after {
   content: var(--tw-content);
   transition-property: all;
