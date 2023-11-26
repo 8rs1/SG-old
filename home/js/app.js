@@ -125,17 +125,8 @@ function sendMSG(enter) {
       newMessage.focus();
     }, 1);
     msgChild.className =
-      "bg-emerald-900 text-emerald-50 text-ellipsis overflow-hidden rounded-xl rounded-br-none w-fit max-w-full py-1 px-2";
-    //   "bg-[#F1FAEE]",
-    //   "text-ellipsis",
-    //   "overflow-hidden",
-    //   "rounded-lg",
-    //   "rounded-br-none",
-    //   "w-fit",
-    //   "max-w-full",
-    //   "py-1",
-    //   "px-2"
-    msgTime.classList.add("text-xs", "text-emerald-100");
+      "bg-emerald-300 text-ellipsis overflow-hidden rounded-xl rounded-br-none w-fit max-w-full py-1 px-2";
+    msgTime.classList.add("text-xs");
     msgChild.innerHTML = newMessage.value;
     msgTime.innerHTML = nowTime.getHours() + ":" + nowTime.getMinutes();
     msg.append(msgChild);

@@ -70,16 +70,16 @@
         <div class="w-20 h-20 z-[1000] rounded-full bg-emeratext-emerald-50 fixed overflow-hidden bottom-6 right-2 sm:right-6 p-2 shadow-[0_0_.3rem_#2e5388] transition-all duration-200 bg-emerald-50" title="ارتباط با پشتیبانی" id="support" style="cursor: pointer; z-index: 999999999999999;">
           <div class="w-full h-full relative bg-emerald-50">
             <div class="w-full h-full flex justify-center items-center">
-              <i class="far fa-message-question text-[3.2rem] text-emerald-900 p-1"></i>
+              <i class="far fa-message-question text-[3.2rem] text-black p-1"></i>
             </div>
             <div class="w-full h-full top-0 right-0 bg-inherit rotate-180 absolute invisible opacity-0 transition-all duration-200 ease-linear bg-emerald-50" id="supportClose">
-              <i class="far fa-close text-[4rem] text-emerald-900 before:flex before:justify-center w-full"></i>
+              <i class="far fa-close text-[4rem] text-red-600 before:flex before:justify-center w-full"></i>
             </div>
           </div>
         </div>
-        <div class="fixed bottom-[6.7rem] right-2 sm:bottom-6 sm:right-[6.6rem] rounded-xl z-[9999999999] rounded-br-none w-52 sm:w-64 h-96 bg-emeratext-emerald-400 invisible transition-all duration-200 opacity-0 overflow-hidden" id="supportdialog">
-          <div class="h-5/6 overflow-y-auto bg-emerald-500 relative">
-            <div class="py-2 px-2 sm:px-3 h-fit sticky top-0 right-0 left-0 text-center bg-emerald-900 text-emerald-50">
+        <div class="fixed bottom-[6.7rem] right-2 sm:bottom-6 sm:right-[6.6rem] rounded-xl z-[9999999999] rounded-br-none w-52 sm:w-64 h-96 bg-emeratext-emerald-400 invisible transition-all duration-200 opacity-0 overflow-hidden shadow-[0_0_.3rem_#2e5388]" id="supportdialog">
+          <div class="h-5/6 overflow-y-auto bg-emerald-100 relative">
+            <div class="py-2 px-2 sm:px-3 h-fit sticky top-0 right-0 left-0 text-center bg-emerald-300">
               <div class="flex items-center gap-1 sm:gap-2">
                 <div><img src="images/support/person1.jpg" alt="پشتیبانی" class="w-10 rounded-full aspect-square"></div>
                 <div>پشتیبانی سکرت گیم</div>
@@ -87,17 +87,17 @@
             </div>
             <div class="flex flex-col justify-items-end py-1.5 px-0.5 gap-1 text-sm" id="chatsection">
               <div class="w-full flex justify-end">
-                <div class="bg-emerald-900 text-emerald-50 text-ellipsis overflow-hidden rounded-xl rounded-bl-none w-fit max-w-full py-1 px-2">
+                <div class="bg-emerald-300 text-ellipsis overflow-hidden rounded-xl rounded-bl-none w-fit max-w-full py-1 px-2">
                   سلام، چطور میتونم کمکتون کنم؟
-                  <div class="text-xs text-emerald-100" id="supportmsgtime"></div>
+                  <div class="text-xs" id="supportmsgtime"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="h-1/6 flex gap-x-2 items-center bg-emerald-900 text-emerald-50">
-            <input type="text" class="w-full h-full pr-2 outline-none bg-emerald-900 text-emerald-50" placeholder="چیزی بنویسید..." id="newmessage">
+          <div class="h-1/6 flex gap-x-2 items-center bg-emerald-300">
+            <input type="text" class="w-full h-full pr-2 outline-none bg-emerald-300 placeholder:text-slate-500" placeholder="چیزی بنویسید..." id="newmessage" autocomplete="off">
             <a href="#nmsg">
-              <i class="far fa-send rotate-180 text-2xl pr-2 py-4 text-emerald-50 cursor-pointer" id="sendmessage"></i>
+              <i class="far fa-send rotate-180 text-2xl pr-2 py-4 cursor-pointer" id="sendmessage"></i>
             </a>
           </div>
         </div>
