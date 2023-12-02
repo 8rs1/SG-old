@@ -24,6 +24,11 @@ let msgSupportTime = $.getElementById("supportmsgtime");
 let newMessage = $.getElementById("newmessage");
 let sendMessage = $.getElementById("sendmessage");
 
+addEventListener("load", () => {
+  let loading = $.getElementById("loading");
+  loading.remove();
+});
+
 $.body.addEventListener("keyup", function (isESC) {
   if (isESC.code === "Escape") {
     if (supportClose.classList.contains("visible")) {
