@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="fontIcons/css/all.css">
 </head>
 <body class="iransans selection:bg-teal-700 selection:text-purple-300">
-  <header class="bg-blue-500 py-3">
-    <section class="container">
-      <article id="navbarcontainer">
-        <nav class="flex justify-between items-center text-white">
+  <header class="bg-blue-500">
+    <section>
+      <article id="navbarcontainer" class="py-2 backdrop-blur bg-purple-600 sticky -top-96 transition-all duration-200 ease-in-out">
+        <nav class="flex justify-between container rounded-xl items-center text-white transition-all duration-200 ease-in-out" id="navbar">
           <div class="cursor-pointer flex justify-center items-center sm:hidden mr-2 w-8 h-8 z-[101]" id="menubar">
             <i class="far fa-bars text-3xl" id="menubaricon"></i>
           </div>
@@ -23,7 +23,7 @@
                 ورود / ثبت نام
               </span>
             </a>
-            <ul class="flex gap-x-6 flex-col gap-y-10 sm:flex-row">
+            <ul class="flex gap-x-6 flex-col gap-y-10 sm:flex-row text-green-200">
               <li class="inline"><a href="javascript:void(0)">خانه</a></li>
               <li class="inline"><a href="javascript:void(0)">مقالات</a></li>
               <li class="inline"><a href="javascript:void(0)">درباره ما</a></li>
@@ -67,12 +67,12 @@
   <footer class="bg-blue-500 relative rounded-t-[2rem]">
     <section class="container">
       <article>
-        <div class="w-20 h-20 z-[1000] rounded-full bg-emeratext-purple-200 fixed overflow-hidden bottom-6 right-2 sm:right-6 p-2 shadow-[0_0_.3rem_#2e5388] transition-all duration-200 bg-purple-200" title="ارتباط با پشتیبانی" id="support" style="cursor: pointer; z-index: 999999999999999;">
-          <div class="w-full h-full relative bg-purple-200">
+        <div class="w-20 h-20 z-[1000] rounded-full fixed overflow-hidden bottom-6 right-2 sm:right-6 p-2 shadow-[0_0_.3rem_#2e5388] transition-all duration-200 bg-white" title="ارتباط با پشتیبانی" id="support" style="cursor: pointer; z-index: 999999999999999;">
+          <div class="w-full h-full relative">
             <div class="w-full h-full flex justify-center items-center">
-              <i class="far fa-message-question text-[3.2rem] text-black p-1"></i>
+              <i class="far fa-message-question text-[3.2rem] text-purple-600 p-1"></i>
             </div>
-            <div class="w-full h-full top-0 right-0 bg-inherit rotate-180 absolute invisible opacity-0 transition-all duration-200 ease-linear bg-purple-200" id="supportClose">
+            <div class="w-full h-full top-0 right-0 bg-inherit rotate-180 absolute invisible opacity-0 transition-all duration-200 ease-linear bg-white" id="supportClose">
               <i class="far fa-close text-[4rem] text-red-600 before:flex before:justify-center w-full"></i>
             </div>
           </div>

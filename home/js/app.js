@@ -2,6 +2,7 @@ let $ = document;
 
 let datetime = new Date();
 
+let navbarContainer = $.getElementById("navbarcontainer");
 let menuBar = $.getElementById("menubar");
 let menuBarIcon = $.getElementById("menubaricon");
 let menu = $.getElementById("menu");
@@ -28,6 +29,16 @@ $.body.addEventListener("keyup", function (isESC) {
     if (supportClose.classList.contains("visible")) {
       supportButton.click();
     }
+  }
+});
+
+document.addEventListener("scroll", () => {
+  let scrollLocation = document.documentElement.scrollTop;
+  console.log(document.documentElement.scrollTop);
+  if (scrollLocation > 70) {
+    navbarContainer.classList.add("top-0");
+  } else {
+    navbarContainer.classList.remove("top-0");
   }
 });
 
