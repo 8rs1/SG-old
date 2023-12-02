@@ -80,7 +80,6 @@ supportButton.addEventListener("click", function () {
   supportButton.classList.add("rounded-full");
 });
 
-
 contactText.style.right = 0;
 contactus.classList.add("after:w-full");
 aboutus.classList.remove("after:w-full");
@@ -113,17 +112,13 @@ newMessage.addEventListener("keyup", sendkey);
 
 function sendMSG(enter) {
   newMessage = $.getElementById("newmessage");
+  let msg = $.createElement("div");
   if (newMessage.value.trim().length) {
-    let msg = $.createElement("div");
     let msgChild = $.createElement("div");
     let nowTime = new Date();
     let msgTime = $.createElement("div");
     msg.className = "w-full";
     msg.id = "nmsg";
-    setTimeout(() => {
-      msg.removeAttribute("id");
-      newMessage.focus();
-    }, 1);
     msgChild.className =
       "bg-emerald-300 text-ellipsis overflow-hidden rounded-xl rounded-br-none w-fit max-w-full py-1 px-2";
     msgTime.classList.add("text-xs");
@@ -134,6 +129,10 @@ function sendMSG(enter) {
     msgChild.append(msgTime);
     newMessage.value = "";
   }
+  setTimeout(() => {
+    msg.removeAttribute("id");
+    newMessage.focus();
+  }, 1);
 }
 function sendkey(keyup) {
   if (keyup.code === "Enter") {
