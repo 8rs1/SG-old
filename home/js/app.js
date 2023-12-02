@@ -35,7 +35,7 @@ $.body.addEventListener("keyup", function (isESC) {
 document.addEventListener("scroll", () => {
   let scrollLocation = document.documentElement.scrollTop;
   console.log(document.documentElement.scrollTop);
-  if (scrollLocation > 70) {
+  if (scrollLocation > 30) {
     navbarContainer.classList.add("top-0");
   } else {
     navbarContainer.classList.remove("top-0");

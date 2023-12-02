@@ -11,12 +11,12 @@
 <body class="iransans selection:bg-teal-700 selection:text-purple-300">
   <header class="bg-blue-500">
     <section>
-      <article id="navbarcontainer" class="py-2 backdrop-blur bg-purple-600 sticky -top-96 transition-all duration-200 ease-in-out">
+      <article id="navbarcontainer" class="py-2 backdrop-blur bg-blue-700/20 sticky -top-96 transition-all duration-200 ease-in-out z-[999]">
         <nav class="flex justify-between container rounded-xl items-center text-white transition-all duration-200 ease-in-out" id="navbar">
-          <div class="cursor-pointer flex justify-center items-center sm:hidden mr-2 w-8 h-8 z-[101]" id="menubar">
-            <i class="far fa-bars text-3xl" id="menubaricon"></i>
+          <div class="cursor-pointer flex justify-center items-center sm:hidden mr-2 w-8 h-8 z-[1000]" id="menubar">
+            <i class="far fa-bars text-3xl select-none" id="menubaricon"></i>
           </div>
-          <div class="flex flex-col sm:flex-row gap-y-10 gap-x-7 bg-blue-600 sm:bg-transparent pt-16 px-2 sm:p-0 sm:items-center fixed -right-[100vw] transition-all duration-200 bottom-0 top-0 sm:static z-[100] h-screen sm:h-[initial]" id="menu">
+          <div class="flex flex-col sm:flex-row gap-y-10 gap-x-7 bg-blue-600 sm:bg-transparent pt-16 px-2 sm:p-0 sm:items-center fixed -right-[100vw] transition-all duration-200 -bottom-96 top-0 sm:static z-[200] h-[120vh] sm:h-[initial]" id="menu">
             <a href="../login/index.html" class="bg-green-500 before:bg-green-600 before:h-full before:w-0 before:absolute before:right-0 before:top-0 overflow-hidden hover:before:w-full before:transition-all before:duration-200 relative transition-all duration-150 ease-linear w-[140px] h-10 rounded-lg ">
               <span class="absolute flex gap-1 items-center inset-0 justify-center bg-transparent">
                 <i class="far fa-user text-xl"></i>
@@ -68,7 +68,7 @@
     <section class="container">
       <article>
         <div class="w-20 h-20 z-[1000] rounded-full fixed overflow-hidden bottom-6 right-2 sm:right-6 p-2 shadow-[0_0_.3rem_#2e5388] transition-all duration-200 bg-white" title="ارتباط با پشتیبانی" id="support" style="cursor: pointer; z-index: 999999999999999;">
-          <div class="w-full h-full relative">
+          <div class="w-full h-full relative select-none">
             <div class="w-full h-full flex justify-center items-center">
               <i class="far fa-message-question text-[3.2rem] text-purple-600 p-1"></i>
             </div>
@@ -104,10 +104,10 @@
       </article>
       <article class="h-[23rem] flex flex-col justify-between">
         <div class="flex justify-center items-center gap-x-10 h-16">
-          <div class="after:block after:absolute after:-bottom-1 sm:after:-bottom-[2px] relative after:h-0.5 after:w-0 hover:after:w-full after:bg-slate-900 after:transition-all after:duration-150 after:ease-linear flex justify-center cursor-pointer" id="contactUs">
+          <div class="after:block after:absolute after:-bottom-1 sm:after:-bottom-[2px] relative after:h-0.5 after:w-0 hover:after:w-full after:bg-slate-900 after:transition-all after:duration-150 after:ease-linear flex justify-center cursor-pointer select-none" id="contactUs">
             ارتباط با ما
           </div>
-          <div class="after:block after:absolute after:-bottom-1 sm:after:-bottom-[2px] relative after:h-0.5 after:w-0 hover:after:w-full after:bg-slate-900 after:transition-all after:duration-150 after:ease-linear flex justify-center cursor-pointer" id="aboutUs">
+          <div class="after:block after:absolute after:-bottom-1 sm:after:-bottom-[2px] relative after:h-0.5 after:w-0 hover:after:w-full after:bg-slate-900 after:transition-all after:duration-150 after:ease-linear flex justify-center cursor-pointer select-none" id="aboutUs">
             درباره ما
           </div>
         </div>
