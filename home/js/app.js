@@ -24,6 +24,8 @@ let msgSupportTime = $.getElementById("supportmsgtime");
 let newMessage = $.getElementById("newmessage");
 let sendMessage = $.getElementById("sendmessage");
 
+let goUp = $.getElementById("goUp");
+
 addEventListener("load", () => {
   let loading = $.getElementById("loading");
   loading.remove();
@@ -126,6 +128,8 @@ aboutus.addEventListener("click", function () {
 sendMessage.addEventListener("click", sendMSG);
 newMessage.addEventListener("keyup", sendkey);
 
+goUp.addEventListener("click", goUpHandler)
+
 function sendMSG(enter) {
   newMessage = $.getElementById("newmessage");
   let msg = $.createElement("div");
@@ -154,6 +158,16 @@ function sendkey(keyup) {
   if (keyup.code === "Enter") {
     sendMessage.click();
   }
+}
+
+function goUpHandler() {
+  let intval = setInterval(() => {
+    
+    document.documentElement.scrollTop -= 8;
+    if (document.documentElement.scrollTop === 0) {
+      clearInterval(intval);
+    }
+  }, 10);
 }
 newMessage.value = "";
 msgSupportTime.innerHTML =
